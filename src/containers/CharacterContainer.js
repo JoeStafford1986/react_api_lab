@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import CharacterSelector from '../components/CharacterSelector.js';
+import CharacterDetail from '../components/CharacterDetail.js';
 
 class CharacterContainer extends Component {
   constructor(props){
@@ -12,6 +14,7 @@ class CharacterContainer extends Component {
 
   componentDidMount() {
   const url = 'http://hp-api.herokuapp.com/api/characters';
+  console.log('componentDidMount');
 
   fetch(url)
     .then( response => response.json() )
